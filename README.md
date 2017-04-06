@@ -1,23 +1,37 @@
-Lorem Ipsum Generator
-=====================
+TwigTruncateBundle
+==================
 
-Library for generating lorem ipsum text. Bonus Twig extension! This has been changed around a bit from the original [geecu/LoremIpsum](https://github.com/geecu/LoremIpsum).
+A Symfony2 bundle to include the [TwigTruncateExtension](https://github.com/dzango/TwigTruncateExtension) into your app. The TwigTruncateExtension allows you to truncate text while preserving HTML tags.
 
-## Build Status
-[![Build Status](https://travis-ci.org/Badcow/LoremIpsum.png)](https://travis-ci.org/Badcow/LoremIpsum)
+Installation
+------------
 
-## Basic Usage
+Add the bundle to your app's `composer.json`:
 
-    $generator = new Badcow\LoremIpsum\Generator();
-    $paragraphs = $generator->getParagraphs(5);
-    echo implode('<p>', $paragraphs);
-
-## Installation
-
-### Using composer
-
-    //composer.json
-    
+```json
     "require": {
-        "badcow/lorem-ipsum": "dev-master"
+        "dzango/twig-truncate-bundle": "~1.0",
+        ...
     }
+```
+
+Enable the bundle in your app's `Appkernel`:
+
+```php
+# app/AppKernel.php
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = array(
+        	...
+            new Dzango\Bundle\TwigTruncateBundle\TwigTruncateBundle(),
+            ...
+        );
+```
+
+Usage
+-----
+
+See the [TwigTruncateExtension](https://github.com/dzango/TwigTruncateExtension)'s documentation.
+

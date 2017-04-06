@@ -1,25 +1,28 @@
 {
-    "name": "badcow/lorem-ipsum",
-    "description": "Lorem ipsum generator.",
+    "name": "dzango/twig-truncate-bundle",
+    "description": "A Symfony 2 bundle to include the TwigTruncateExtension into your app.",
+    "keywords": ["symfony", "symfony2", "bundle", "twig", "truncate"],
+    "homepage": "https://github.com/dzango/TwigTruncateBundle",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mathew Tinsley",
-            "email": "tinsley@tinsology.net"
-        },
-        {
-            "name": "Sam Williams",
-            "email": "sam@badcow.co"
+            "name": "Dzango SARL",
+            "email": "info@dzango.com",
+            "homepage": "http://www.dzango.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.9"
-    },
-    "suggest": {
-        "twig/twig": "Twig is a template language for PHP, released under the new BSD license (code and documentation)."
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.0||~3.0",
+        "dzango/twig-truncate-extension": "~1.0"
     },
     "autoload": {
-        "psr-4": { "Badcow\\LoremIpsum\\": "lib/" }
+        "psr-4": { "Dzango\\Bundle\\TwigTruncateBundle\\": "src" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
